@@ -1,17 +1,32 @@
+#Dict per_cent содержит информацию о ставках в разных банках
 per_cent = {'ТКБ': 5.6, 'СКБ': 5.9, 'ВТБ': 4.28, 'СБЕР': 4.0}
 
+# выведем строку для ввода суммвы депозита в консоли
 money=int(input('Введите сумму депозита:'))
+
+#Укажем ставки в разных банках
 rateTKB=0.056
 rateSKB=0.059
 rateVTB=0.0428
 rateSBER=0.040
+
+#Вычислим сумму дохода от депозита за год в разных банках
 depositTKB=money*rateTKB
 depositSKB=money*rateSKB
 depositVTB=money*rateVTB
 depositSBER=money*rateSBER
 
-deposit_list=[depositTKB,depositSKB,depositVTB,depositSBER]
+#преобразуем результат в целое число
+depositTKB_int = int(depositTKB)
+depositSKB_int = int(depositSKB)
+depositVTB_int = int(depositVTB)
+depositSBER_int = int(depositSBER)
 
+#Сформируем лист из полученных значений
+deposit_list=[depositTKB_int,depositSKB_int,depositVTB_int,depositSBER_int]
+
+#Выведем лист из суммы дохода за год по депозитам в разных банках
 print(deposit_list)
 
+#Выведем максимальное значение суммы дохода от депозита из разных банков
 print('максимальная сумма, которую вы можете заработать:', max(deposit_list), 'руб.')

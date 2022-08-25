@@ -8,7 +8,7 @@ rateTKB=per_cent.get('ТКБ')/100
 rateSKB=per_cent.get('СКБ')/100
 rateVTB=per_cent.get('ВТБ')/100
 rateSBER=per_cent.get('СБЕР')/100
-#Вычислим сумму дохода от депозита за год в разных банках
+#получаем ставки из разных Банков из словаря per_cent
 depositTKB=money*rateTKB
 depositSKB=money*rateSKB
 depositVTB=money*rateVTB
